@@ -1,0 +1,131 @@
+/* ==========================================================================
+   1. ESTILOS GLOBALES
+   ========================================================================== */
+   body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos para textos informativos */
+p {
+    color: #666;
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 5px auto 20px auto;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* ==========================================================================
+   2. CABECERA Y SECCIONES DE TEXTO CENTRADOS
+   ========================================================================== */
+.header-centrado, 
+.seccion-info, 
+.resultados-centrados {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header-centrado img {
+    width: 150px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.resultados-centrados h2 {
+    margin-top: 30px;
+}
+
+.resultados-centrados ul {
+    list-style: none;
+    padding: 0;
+    max-width: 450px; /* Alineado al nuevo ancho del formulario */
+    margin: 15px auto;
+    text-align: center; /* Centra el texto de las incidencias añadidas */
+}
+
+/* Elementos de la lista de incidencias */
+.resultados-centrados li {
+    background: #e9e9e9;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 3px solid #0056b3; /* Cambio estético para acompañar el diseño centrado */
+}
+
+/* ==========================================================================
+   3. ESTILOS DEL FORMULARIO (Compacto y Centrado)
+   ========================================================================== */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    max-width: 450px; /* Reducido para que los casilleros sean más proporcionados */
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center; /* Centra etiquetas y contenidos internos */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-align: center; /* Centra el texto que escribe el usuario y las opciones */
+    text-align-last: center; /* Asegura el centrado del texto del select en todos los navegadores */
+}
+
+/* Contenedor LOPD perfectamente centrado en su línea */
+.lopd-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente el bloque de la casilla y texto */
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* ==========================================================================
+   4. DISEÑO ADAPTATIVO
+   ========================================================================== */
+@media (max-width: 600px) {
+    form {
+        width: 95%;
+        padding: 15px;
+    }
+}
