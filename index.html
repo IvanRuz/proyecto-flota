@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Flota - Registro de Incidencias</title>
     
-    <meta name="description" content="Portal interno para la gestión y registro de incidencias, averías y mantenimiento de la flota de vehículos.">
+    <!-- Título y metadatos para SEO y accesibilidad -->
+    <title>Gestión de Flota - Registro de Incidencias</title>
+    <meta name="description" content="Portal interno para la gestión y registro de averías de la flota de vehículos.">
     <meta name="keywords" content="gestión flota, incidencias, reparación vehículos, mantenimiento">
     <meta name="author" content="Iván Ruz Carrasco">
     
+    <!-- Enlace a la hoja de estilos externa -->
     <link rel="stylesheet" href="css/estilos.css">
     
+    <!-- Librería externa (SweetAlert2) para ventanas emergentes estilizadas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
+    <!-- Cabecera principal del portal -->
     <header class="header-centrado">
         <h1>Portal de Gestión de Incidencias</h1>
         <h2>Proyecto para la obtención del Certificado de Profesionalidad</h2>
@@ -22,17 +26,22 @@
     </header>
 
     <main>
+        <!-- Sección de instrucciones para el operario -->
         <section class="seccion-info">
             <h2>Registro de Nueva Avería</h2>
-            <p>Por favor, introduzca los datos del vehículo afectado y seleccione el tipo de asistencia o reparación técnica requerida. Todos los campos marcados son obligatorios para proceder con el parte de trabajo.</p>
+            <p>Por favor, introduzca los datos del vehículo afectado y seleccione el tipo de asistencia requerida. Todos los campos son obligatorios.</p>
         </section>
 
+        <!-- Formulario principal de captura de datos -->
         <form id="incidenciaForm">
+            
+            <!-- Campo para el ID del vehículo -->
             <div class="form-group">
                 <label for="vehiculo">ID de Vehículo:</label>
                 <input type="text" id="vehiculo" name="vehiculo" placeholder="Ej: B-1234" required>
             </div>
             
+            <!-- Menú desplegable para categorizar la avería -->
             <div class="form-group">
                 <label for="tipo">Tipo de Avería:</label>
                 <select id="tipo" name="tipo" required>
@@ -43,26 +52,32 @@
                 </select>
             </div>
 
+            <!-- Casilla de verificación legal (LOPDGDD) -->
             <div class="lopd-container">
                 <input type="checkbox" id="lopd" name="lopd" required>
                 <label for="lopd">He leído y acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a>.</label>
             </div>
             
+            <!-- Botón para procesar el formulario -->
             <button type="submit">Registrar Incidencia</button>
         </form>
 
+        <!-- Zona para mostrar el registro temporal de partes enviados -->
         <section class="resultados-centrados">
             <h2>Incidencias Registradas:</h2>
-            <p>A continuación se muestra el histórico de partes de avería enviados durante la sesión actual:</p>
+            <p>Histórico de partes de avería enviados durante la sesión actual:</p>
             <ul id="listaIncidencias"></ul>
         </section>
     </main>
 
+    <!-- Enlace al archivo de lógica JavaScript -->
     <script src="js/app.js"></script>
+    
+    <!-- Pie de página con enlaces externos -->
     <footer style="text-align: center; margin-top: 40px; padding: 20px; font-size: 0.9rem; color: #666;">
         <p>Síguenos en nuestras Redes Sociales:</p>
-        <a href="https://linkedin.com" target="_blank" aria-label="Visitar nuestro perfil de LinkedIn">LinkedIn</a> | 
-        <a href="https://twitter.com" target="_blank" aria-label="Visitar nuestro perfil de Twitter">Twitter</a>
+        <a href="https://linkedin.com" target="_blank" aria-label="Visitar perfil de LinkedIn">LinkedIn</a> | 
+        <a href="https://twitter.com" target="_blank" aria-label="Visitar perfil de Twitter">Twitter</a>
     </footer>
 </body>
 </html>
